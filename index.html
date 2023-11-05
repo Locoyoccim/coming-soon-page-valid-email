@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handjet:wght@300&family=Montserrat&family=Yatra+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles folder/styles.css" />
+    <script defer src="/styles folder/buttom.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="img-logo">
+        <img src="/images/logo.svg" alt="base-apparel" />
+      </div>
+      <div class="woman-performance">
+        <img src="/images/hero-mobile.jpg" alt="woman" />
+      </div>
+      <div id="titulo">
+        <h1>
+          <p>We're</p>
+          coming<br />soon
+        </h1>
+      </div>
+
+      <article id="contenido">
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our
+        launch deals.
+      </article>
+
+      <div id="formulario-email">
+        <form id="get-email" action="get-email">
+          <label for="email"></label>
+          <input
+            type="email"
+            placeholder="Email  Address"
+            name="email"
+            id="email"
+          />
+          <img src="/images/icon-error.svg" alt="icon-error" id="icon-error" />
+          <button type="submit" class="arrow-buttom">
+            <img
+              class="arrow-img"
+              src="/images/icon-arrow.svg"
+              alt="icon-arrow"
+            />
+          </button>
+          <p class="msj-error">Please provide a valid email</p>
+        </form>
+      </div>
+
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">CARLOS HERNANDEZ</a>.
+        </p>
+      </footer>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+:root {
+  /*Primary*/
+  --DesaturatedRed: hsl(0, 36%, 70%);
+  --SoftRed: hsl(0, 93%, 68%);
+  /*Neutral*/
+  --DarkGrayishRed: hsl(0, 6%, 24%);
+}
+footer {
+  grid-column: 1 / span 1;
+  grid-row: 6 / span 1;
+  display: grid;
+  align-content: flex-end;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: black;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+body {
+  font-family: "JosefinSans";
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 740px;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+section {
+  display: grid;
+  grid-template-columns: 370px;
+  /*   1 -  2  -  3   - 4 -  5   - 6 - 7*/
+  grid-template-rows: 75px 253px auto 110px 90px 20px;
+  grid-gap: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+}
+.img-logo {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  display: grid;
+  align-content: center;
+  padding-left: 30px;
+}
+.img-logo img {
+  width: 100px;
+}
+.woman-performance {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  margin: 0;
+  padding: 0;
+}
+.woman-performance img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#titulo {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  text-align: center;
+  display: grid;
+  align-content: center;
+}
+#titulo h1 {
+  padding-bottom: 15px;
+  font-size: 2.5em;
+  margin: 0;
+  padding: 40px 0 5px 0;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 40px;
+}
+p {
+  margin: 0;
+  padding: 0;
+  color: var(--DesaturatedRed);
+}
+#contenido {
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 1;
+  color: var(--DesaturatedRed);
+  text-align: center;
+  margin: 0 25px 0;
+  line-height: 25px;
+  padding-top: 5px;
+}
+#formulario-email {
+  position: relative;
+  grid-column: 1 / span 1;
+  grid-row: 5 / span 1;
+  color: var(--DesaturatedRed);
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+input {
+  border: var(--DesaturatedRed) 1px solid;
+  border-radius: 30px;
+  height: 50px;
+  width: 320px;
+}
+input:focus {
+  padding-left: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+input::placeholder {
+  color: var(--DesaturatedRed);
+}
+.arrow-buttom {
+  position: absolute;
+  transform: translate(-70px, 0);
+  width: 70px;
+  height: 55px;
+  border-radius: 30px;
+  border: 1px solid var(--DesaturatedRed);
+  cursor: pointer;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+.arrow-buttom:hover {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 74%, 74%));
+}
+.msj-error {
+  padding: 5px 0 0 20px;
+  opacity: 0;
+}
+#icon-error {
+  position: absolute;
+  transform: translate(-100px, 14px);
+  opacity: 0;
+}
+input.error-activo {
+  border: 3px solid var(--SoftRed);
+}
+
+@media screen and (min-width: 780px) {
+  section {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 60px auto 350px 60px;
+    grid-template-rows: auto 80px 200px 120px 100px auto;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 74%, 74%));
+  }
+  .img-logo,
+  #titulo,
+  #contenido,
+  #formulario-email {
+    background-color: white;
+  }
+  .img-logo {
+    grid-area: 2 / 2 / span 1 / span 1;
+    padding: 0 50px 0 50px;
+    border-top-left-radius: 15px;
+  }
+  .woman-performance {
+    grid-area: 2 / 3 / span 4 / span 1;
+    background-image: url(/images/hero-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .woman-performance > img {
+    display: none;
+  }
+  #titulo {
+    grid-area: 3 / 2 / span 1 / span 1;
+    text-align: start;
+    padding: 0 50px 0 50px;
+    font-size: 1.3rem;
+  }
+  #contenido {
+    grid-area: 4 / 2 / span 1 / span 1;
+    margin: 0;
+    text-align: start;
+    padding: 0 100px 0 50px;
+  }
+  #formulario-email {
+    grid-area: 5 / 2 / span 1 / span 1;
+    border-bottom-left-radius: 15px;
+    display: block;
+    padding-left: 50px;
+    width: auto;
+  }
+
+  footer {
+    grid-area: 6 / 2 / span 1 / span 2;
+  }
+}
